@@ -16,6 +16,7 @@ import hashlib
 import json
 from time import time
 
+from flask import Flask
 
 class Blockchain:
 
@@ -82,5 +83,31 @@ class Blockchain:
 
 
 # 计算出一个工作量证明（proof）
-testPow = Blockchain()
-testPow.proof_of_work(100)
+# testPow = Blockchain()
+# testPow.proof_of_work(100)
+
+app = Flask(__name__)
+
+# 路由
+@app.route('/index', methods=['GET'])
+def index():
+    return "Hello BlockChain"
+
+# 接收请求，添加交易
+@app.route('/transactions/new', methods=['POST'])
+def new_transaction():
+    return "We will add a new transactions"
+
+# 挖矿
+@app.route('/mine', methods=['GET'])
+def mine():
+    return "We will a new block"
+
+@app.route('/chain', methods=['GET'])
+def full_chain():
+    return "return full chain"
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+

@@ -1,2 +1,3 @@
 .idea
-lesson1.iml
+*.iml
+venv
