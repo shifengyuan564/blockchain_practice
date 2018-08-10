@@ -18,6 +18,7 @@ from time import time
 
 from flask import Flask
 
+
 class Blockchain:
 
     def __init__(self):
@@ -88,20 +89,24 @@ class Blockchain:
 
 app = Flask(__name__)
 
+
 # 路由
 @app.route('/index', methods=['GET'])
 def index():
     return "Hello BlockChain"
+
 
 # 接收请求，添加交易
 @app.route('/transactions/new', methods=['POST'])
 def new_transaction():
     return "We will add a new transactions"
 
+
 # 挖矿
 @app.route('/mine', methods=['GET'])
 def mine():
     return "We will a new block"
+
 
 @app.route('/chain', methods=['GET'])
 def full_chain():
@@ -110,4 +115,3 @@ def full_chain():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-

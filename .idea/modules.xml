@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/blockchain_practice.iml" filepath="$PROJECT_DIR$/blockchain_practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson1.iml" filepath="$PROJECT_DIR$/lesson1.iml" />
     </modules>
   </component>
 </project>
